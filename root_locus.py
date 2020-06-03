@@ -91,7 +91,7 @@ aux_equ = R_Table[len(R_Table) - 3][0] * s ** 2 + criticalK
 print("Auxiliary Equation: ", end="")
 print(aux_equ)
 imaginaryAxisIntercepts = sy.solve(aux_equ, s)
-print("Imaginary Axis Intercepts:")
+print("Imaginary Axis Intercepts: ", end="")
 print(imaginaryAxisIntercepts)
 for intercept in imaginaryAxisIntercepts:
     intercept = complex(intercept)
@@ -119,7 +119,7 @@ for i in range(0, len(poles)):
     if departureAngle < 0:
         departureAngle += 2 * math.pi
     departureAngles.append(departureAngle)
-print("Departure Angles:")
+print("Departure Angles:", end="")
 print(departureAngles)
 radius = 3
 for i in range(0, len(departureAngles)):
@@ -134,7 +134,6 @@ for i in range(0, len(departureAngles)):
 # plotting root locus
 rootsX = []
 rootsY = []
-print("This takes a while")
 flippingPoint = -eq.subs(s, break_away_points[0])
 for k in range(0, 10000000, 2000):
     roots = sy.solve(eq + k, s, simplify=False, rational=False)
