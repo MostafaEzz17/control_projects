@@ -4,7 +4,7 @@ import numpy as ny
 import sympy as sy
 # 1) define and plot the poles
 plt.plot([0, 0], [-60, 60], 'k-', lineWidth=0.6)
-plt.plot([-90, 20], [0, 0], 'k-', lineWidth=0.6)
+plt.plot([-100, 25], [0, 0], 'k-', lineWidth=0.6)
 poles = [(0, 0), (-25, 0), (-50, 10), (-50, -10)]
 for x, y in poles:
     plt.plot(x, y, 'x')
